@@ -1,0 +1,61 @@
+/* Estilos para el panel lateral */
+.container-bar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bar-section {
+    width: 50px;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+.bar-section:hover {
+    width: 200px; /* Ancho cuando el cursor pasa sobre el panel */
+}
+
+.footer-social-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer-contact-item {
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icon {
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-contact-item:hover .footer-social-icon {
+    opacity: 1;
+    transform: scale(1.1); /* Aumentar el tamaño del icono al pasar el cursor */
+}
+
+/* Efecto de animación con el scroll */
+@keyframes movePanel {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.container-bar {
+    animation: movePanel 1s ease-out;
+}
+
+.bar-section:hover .footer-contact-item {
+    transform: translateX(10px); /* Desplazar los iconos hacia la derecha cuando el panel se expande */
+}

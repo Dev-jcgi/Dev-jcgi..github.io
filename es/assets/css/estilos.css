@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container-bar {
+    width: 30px;
+    height: 20px;
+    position: fixed;
+    left: 0;
+    top: 25%;
+    z-index: 10;
+    background-color: #dfffe5;
+    /* Fondo azul claro con transparencia */
+    /*border-radius: 50%;*/
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.45s ease-in-out;
+}
+
+.icon-play {
+    cursor: pointer;
+    font-size: 30px; /* Ajusta el tamaño del icono aquí */
+    color: #dfffe5;
+    display: inline-block;
+    padding: 15px;
+    transition: transform 0.45s;
+    margin-left: 10px;
+}
+
+#btn-social {
+    display: none;
+}
+
+#btn-social:checked~.icon-play {
+    transform: rotate(90deg);
+    /* Rotación de la pestaña */
+}
+
+.icon-social {
+    display: flow;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.45s ease;
+}
+
+#btn-social:checked~.icon-social {
+    transform: translateX(0);
+    /* Muestra el panel de iconos cuando se hace clic */
+}
+
+.container-bar a {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 6px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container-bar a:hover {
+    background-color: #dfffe5;
+    /* Resaltar en hover */
+}
+
+
+/* Tonalidades diferentes de azul para cada red social */
+
+.icon-linkedin {
+    background-color: #d5f3ff;
+    /* Azul de LinkedIn */
+}
+
+.icon-github {
+    background-color: #d5f3ff;
+    /* Gris oscuro de GitHub */
+}
+
+.icon-gate {
+    background-color: #d5f3ff;
+    /* Azul de ResearchGate */
+}
+
+.icon-www {
+    background-color: #d5f3ff;
+    /* Azul acero para Website */
+}
+
+.icon-youtube {
+    background-color: #d5f3ff;
+    /* Rojo de YouTube */
+}
+
+.container-bar a span {
+    display: none;
+    /* Solo muestra el nombre de la red social en hover */
+}
+
+.container-bar a:hover span {
+    display:inline-flex;
+    margin-left: 10px;
+}
+
+.container-bar a img {
+    width: 100%;
+    height: auto;
+    max-width: 30px; /* Ajusta el tamaño máximo del ícono según sea necesario */
+    max-height: 30px; /* Ajusta la altura máxima para mantener el tamaño de los íconos proporcionado */
+    object-fit: contain; /* Asegura que la imagen mantenga su aspecto dentro del contenedor */
+}
+
+
+
+
+
+
+
+.footer-social-vertical {
+    display: flex;
+    flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+    align-items: center; /* Opcional: Centra los elementos verticalmente */
+  }
+  
+  .footer-contact-item {
+    margin-bottom: 10px; /* Añade espacio entre cada ícono */
+  }
+  
+  .footer-social-icon {
+    width: 30px; /* Ajusta el tamaño de los iconos */
+    height: 30px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+

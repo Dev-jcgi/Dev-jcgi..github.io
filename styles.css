@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: transparent; /* Fondo completamente transparente */
+    cursor: url('assets/imgs/cursor.png'), auto; /* Cambia la ruta a tu icono de cursor */
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Para que el canvas esté detrás del contenido */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /*background: rgba(255, 255, 255, 0.7);*/ /* Fondo blanco con un poco de transparencia */
+   background-color: transparent; /* Fondo completamente transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: rgba(156, 206, 242, 0.438); /* Azul claro con más transparencia */
+    padding: 20px;
+    border-radius: 500px;
+    text-align: center;
+    box-shadow: 8px 4px 3px 3px rgba(0, 0, 0, 0.3); /* Sombra más tenue */
+    transition: transform 0.2s ease-in-out;
+    max-width: 100%;
+    width: 400px;
+}
+
+.popup:hover {
+    transform: scale(1.05); /* Efecto de zoom en hover */
+}
+
+/* Nueva clase para los botones en columnas */
+.button-container {
+    display: flex;
+    justify-content: space-around; /* Distribuir espacio equitativamente */
+    align-items: center;
+    width: 100%; /* Ocupa el ancho total del contenedor */
+    padding: 20px;
+}
+
+.popup button {
+    width: 100px; /* Ajusta el tamaño del botón */
+    height: 100px; /* Ajusta el tamaño del botón */
+    border-radius: 50%; /* Bordes circulares */
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    background: rgba(0, 123, 255, 14%); /* Azul con más transparencia */
+    color: white;
+}
+
+.popup button.ingles {
+    background: rgba(0, 123, 255, 14%); /* Azul claro */
+}
+
+.popup button.espanol {
+    background: rgba(40, 167, 69, 14%); /* Verde claro */
+}
+
+.popup button:hover {
+    transform: translateY(-2px);
+}
+
+.popup button.ingles:hover {
+    background: rgba(0, 123, 255, 1); /* Azul más oscuro en hover */
+}
+
+.popup button.espanol:hover {
+    background: rgba(40, 167, 69, 1); /* Verde más oscuro en hover */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .popup {
+        padding: 15px;
+    }
+
+    .popup button {
+        width: 80px;
+        height: 80px;
+        font-size: 0.9em;
+    }
+}
